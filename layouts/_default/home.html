@@ -23,10 +23,28 @@
         }
         
         header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: 
+                radial-gradient(circle at 0% 0%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 20%),
+                radial-gradient(circle at 100% 100%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 20%),
+                linear-gradient(135deg, #0f1419 0%, #2a3f5f 50%, #3a4a5f 100%);
             color: white;
-            padding: 80px 40px;
+            padding: 100px 40px;
             text-align: center;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .header-ascii {
+            font-family: 'Courier New', monospace;
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 0px;
+            color: rgba(255,255,255,0.7);
         }
         
         header h1 {
@@ -35,13 +53,16 @@
             font-weight: 700;
             margin-bottom: 8px;
             letter-spacing: -1px;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
         
         header p {
             font-size: 1.1rem;
-            font-weight: 300;
-            opacity: 0.95;
+            font-weight: 400;
+            color: rgba(255,255,255,0.9);
             letter-spacing: 0.5px;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
         }
         
         main {
@@ -183,8 +204,14 @@
 <body>
     <div class="container">
         <header>
-            <h1>Joshua C Laferriere</h1>
-            <p>ML Engineer | Semantic AI | Production NLP Systems</p>
+            <div class="header-content">
+                <span class="header-ascii">(• ◡•)</span>
+                <div>
+                    <h1>Joshua C Laferriere</h1>
+                    <p>ML Engineer | Semantic AI | Production NLP Systems</p>
+                </div>
+                <span class="header-ascii">(❍ᴥ❍ʋ)</span>
+            </div>
         </header>
         
         <main>

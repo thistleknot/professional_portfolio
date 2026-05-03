@@ -48,7 +48,6 @@ starters/**/pnpm-lock.yaml
 .idea/
 /.vscode/
 .specstory/
-/docs/
 
 # ============================================================================
 # Language & Framework Specific

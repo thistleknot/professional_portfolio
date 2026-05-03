@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }} - Professional Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        main {
+            padding: 40px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .status {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .project-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            background: #f9f9f9;
+        }
+        .project-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .project-card p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .project-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .project-card a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        .meta {
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .nav-links a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .nav-links a:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Professional Portfolio</h1>
+            <p>{{ .Site.Params.hugoblox.identity.tagline }}</p>
+        </header>
+        
+        <main>
+            <div class="status">
+                ✅ <strong>Portfolio Boilerplate Active</strong> 
+                <br>This is a live preview of your portfolio. Edit content files to customize, then deploy to GitHub Pages.
+            </div>
+
+            <section>
+                <h2>📂 Portfolio Structure</h2>
+                <p>Your portfolio includes the following sections (click to view):</p>
+                <div class="nav-links">
+                    <a href="/authors/me/">👤 About/Profile</a>
+                    <a href="/projects/side-projects/">🎯 Side Projects</a>
+                    <a href="/projects/work-projects/">💼 Work Projects</a>
+                </div>
+            </section>
+
+            <section>
+                <h2>🎯 Sections Included</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>📝 Profile & Resume</h3>
+                        <p><strong>File:</strong> content/authors/me/_index.md</p>
+                        <p>Your professional bio, work history, education, skills, and social links.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>🚀 Side Projects (3 templates)</h3>
+                        <p><strong>Files:</strong> content/projects/side-projects/project-1,2,3/</p>
+                        <p>Showcase your personal projects, learning initiatives, and side hustles.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>💼 Work Projects (3 templates)</h3>
+                        <p><strong>Files:</strong> content/projects/work-projects/work-project-1,2,3/</p>
+                        <p>Highlight professional achievements with business impact metrics ($, %, growth, performance).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>🚀 Next Steps</h2>
+                <ol style="margin-left: 20px; line-height: 2;">
+                    <li><strong>Edit Profile:</strong> Update content/authors/me/_index.md with your info</li>
+                    <li><strong>Add Your Projects:</strong> Edit the 6 project template files</li>
+                    <li><strong>Add Images:</strong> Place project images in project folders</li>
+                    <li><strong>Deploy:</strong> Follow GITHUB_PAGES_DEPLOY.md to publish</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>📚 Documentation</h2>
+                <p>Read these guides (in your project directory):</p>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li><strong>PORTFOLIO_GUIDE.md</strong> - Complete content editing guide</li>
+                    <li><strong>GITHUB_PAGES_DEPLOY.md</strong> - Step-by-step deployment</li>
+                    <li><strong>README.md</strong> - Project overview</li>
+                </ul>
+            </section>
+
+            <section style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin-top: 40px;">
+                <h3 style="color: #333; margin-bottom: 10px;">💡 Pro Tips</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Work projects should focus on quantified business impact</li>
+                    <li>Use generic descriptions to protect confidentiality</li>
+                    <li>High-quality images make your portfolio stand out</li>
+                    <li>Update regularly and remove outdated content</li>
+                    <li>Test on mobile - responsive design is important</li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <p>🚀 Built with HugoBlox | Ready to deploy to GitHub Pages</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Local development server running • See GITHUB_PAGES_DEPLOY.md for publishing</p>
+        </footer>
+    </div>
+</body>
+</html>

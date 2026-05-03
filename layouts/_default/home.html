@@ -1,4 +1,190 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #fafbfc;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+        
+        main {
+            padding: 60px 40px;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 50px 0 30px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 25px 0 8px 0;
+        }
+        
+        h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 20px 0 10px 0;
+        }
+        
+        h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 10px 0 4px 0;
+        }
+        
+        p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #4a5568;
+        }
+        
+        .job-item, .edu-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #edf2f7;
+        }
+        
+        .job-item:last-child, .edu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .project-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f7fafc;
+            border-left: 3px solid #667eea;
+            border-radius: 4px;
+        }
+        
+        .project-section h3 {
+            margin-top: 0;
+        }
+        
+        .meta {
+            color: #999;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 40px;
+            background: #f7fafc;
+            color: #718096;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        footer p {
+            margin: 6px 0;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            main {
+                padding: 40px 20px;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+                margin: 35px 0 20px 0;
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Professional Portfolio</h1>
+            <p>Resume • Personal Projects • Work Achievements</p>
+        </header>
+        
+        <main>
 <h2>📄 Resume & Experience</h2>
 {{ range where .Site.Pages "Type" "authors" }}
     <section class="resume-section">
@@ -60,33 +246,12 @@
         {{ end }}
     {{ end }}
 {{ end }}
-
-<style>
-.job-item, .edu-item, .project-section {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-}
-.job-item:last-child, .edu-item:last-child, .project-section:last-child {
-    border-bottom: none;
-}
-.meta {
-    color: #999;
-    font-size: 0.9em;
-    margin: 5px 0;
-}
-.resume-section h3, .project-section h3, .resume-section h5, .project-section h5 {
-    color: #667eea;
-    margin: 10px 0 5px 0;
-}
-a {
-    color: #667eea;
-    text-decoration: none;
-    font-weight: bold;
-}
-a:hover {
-    text-decoration: underline;
-    color: #764ba2;
-}
-</style>
-{{ end }}
+        </main>
+        
+        <footer>
+            <p><strong>Professional Portfolio</strong> • Built with HugoBlox</p>
+            <p>Ready for GitHub Pages deployment</p>
+        </footer>
+    </div>
+</body>
+</html>

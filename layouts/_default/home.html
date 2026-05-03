@@ -180,23 +180,32 @@
 <body>
     <div class="container">
         <header>
-            <h1>Your Professional Portfolio</h1>
-            <p>Resume • Personal Projects • Work Achievements</p>
+            <h1>Joshua C Laferriere</h1>
+            <p>ML Engineer | Semantic AI | Production NLP Systems</p>
         </header>
         
         <main>
 <h2>📄 Resume & Experience</h2>
 {{ range where .Site.Pages "Type" "authors" }}
     <section class="resume-section">
-        <h3>{{ .Title }}</h3>
         <p class="bio">{{ .Params.bio }}</p>
         
+        {{ if .Params.skills }}
+            <h4 style="color: #667eea; margin-top: 15px; margin-bottom: 10px;">Core Competencies</h4>
+            {{ range .Params.skills }}
+                <div style="margin-bottom: 12px;">
+                    <strong>{{ .name }}:</strong>
+                    <p>{{ delimit .items ", " }}</p>
+                </div>
+            {{ end }}
+        {{ end }}
+        
         {{ if .Params.work }}
-            <h4 style="color: #667eea; margin-top: 15px; margin-bottom: 10px;">Experience</h4>
+            <h4 style="color: #667eea; margin-top: 15px; margin-bottom: 10px;">Professional Experience</h4>
             {{ range .Params.work }}
                 <div class="job-item">
                     <h5>{{ .position }}</h5>
-                    <p class="meta">{{ .company_name }} • {{ .location }}</p>
+                    <p class="meta">{{ .company_name }} • {{ .location }} • {{ dateFormat "Jan 2006" .date_start }}{{ if .date_end }} - {{ dateFormat "Jan 2006" .date_end }}{{ else }} - Present{{ end }}</p>
                     <p>{{ .summary }}</p>
                 </div>
             {{ end }}
@@ -207,7 +216,7 @@
             {{ range .Params.education }}
                 <div class="edu-item">
                     <h5>{{ .area }}</h5>
-                    <p class="meta">{{ .institution }}</p>
+                    <p class="meta">{{ .institution }} • {{ dateFormat "2006" .date_start }}-{{ dateFormat "2006" .date_end }}</p>
                     <p>{{ .summary }}</p>
                 </div>
             {{ end }}
@@ -230,27 +239,12 @@
             {{ end }}
         {{ end }}
     {{ end }}
-{{ end }}
 
-<h2>💼 Work Achievements</h2>
-{{ range .Site.Pages }}
-    {{ if and (eq .Section "projects") .File }}
-        {{ if strings.Contains .File.Dir "work-projects" }}
-            {{ if ne .Title "Work Projects" }}
-                <section class="project-section">
-                    <h3>{{ .Title }}</h3>
-                    <p>{{ .Summary }}</p>
-                    <p><a href="{{ .RelPermalink }}">Read More →</a></p>
-                </section>
-            {{ end }}
-        {{ end }}
-    {{ end }}
-{{ end }}
         </main>
         
         <footer>
-            <p><strong>Professional Portfolio</strong> • Built with HugoBlox</p>
-            <p>Ready for GitHub Pages deployment</p>
+            <p><strong>Joshua C Laferriere</strong></p>
+            <p><a href="https://github.com/thistleknot">GitHub</a> • <a href="mailto:laferrierejc@gmail.com">Email</a></p>
         </footer>
     </div>
 </body>

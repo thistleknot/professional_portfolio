@@ -1,7 +1,7 @@
 ---
 title: "Generative AI Studio: ComfyUI & Open-WebUI Orchestration"
 date: 2026-04-15
-external_link: ""
+external_link: "https://github.com/thistleknot/comfyui-dockerfiles"
 image:
   filename: "generative-studio.png"
   preview_only: false

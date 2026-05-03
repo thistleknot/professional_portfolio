@@ -4,29 +4,39 @@ role: Machine Learning & AI Engineer
 avatar:
   filename: avatar.jpg
 bio: |
-  Machine Learning Engineer with over a decade of experience in information technology including data mining, deep learning, and AI-driven systems. Proven ability to deliver impactful, data-driven solutions across aerospace, media, and finance. Specializes in building NLP and recommendation systems leveraging open-source tools and cloud infrastructure.
+  ML Engineer specializing in production NLP, semantic systems (RAG, pgVector, knowledge graphs), and neurosymbolic AI. 12+ years across aerospace, media, finance. Built SOTA transformer pipelines, domain-specific retrievers, and deployed resilient systems at scale. Active in SOTA research integration and agentic AI orchestration.
 interests:
-  - Deep Learning & Transformers
-  - NLP & Language Models
-  - Knowledge Graphs & Semantic Systems
-  - Music & Audio ML
+  - Semantic AI & Knowledge Graphs
+  - RAG & Retrieval Systems
+  - Agentic Orchestration
+  - SOTA Research Integration
+  - Transformers & Neurosymbolic Systems
 social:
   - icon: github
     icon_pack: fab
-    link: https://github.com/yourprofile
+    link: https://github.com/thistleknot
   - icon: linkedin
     icon_pack: fab
-    link: https://linkedin.com/in/yourprofile
+    link: https://linkedin.com/in/joshualaferriere
 organizations:
   - name: Boeing
     url: "https://www.boeing.com"
 education:
-  - area: Data Science & Machine Learning
-    institution: Self-Directed & Professional Development
-    date_start: 2010-01-01
-    date_end: 2026-04-01
-    summary: |
-      Over a decade of hands-on experience with deep learning frameworks, NLP systems, knowledge graphs, and AI engineering across aerospace, media, and finance sectors.
+  - area: Master of Science in Information Technology
+    institution: California State University Fullerton
+    date_start: 2017-08-01
+    date_end: 2019-05-01
+    summary: Data Science specialization. Thesis work on semantic systems and information retrieval.
+  - area: Bachelor of Science in Business Administration
+    institution: California State University Dominguez Hills
+    date_start: 2013-08-01
+    date_end: 2016-12-01
+    summary: Business Analytics focus. Foundation in quantitative analysis and data-driven decision making.
+  - area: Associate of Science in Computer Programming
+    institution: Long Beach City College
+    date_start: 2013-08-01
+    date_end: 2016-12-01
+    summary: Early programming foundation in systems and algorithms.
 work:
   - position: Data Scientist & AI Engineer
     company_name: Boeing
@@ -35,7 +45,7 @@ work:
     date_start: 2022-02-01
     date_end: ""
     summary: |
-      - Developed domain-specific RAG pipeline using hybrid retriever to reduce service cycle time
+      - Developed domain-specific RAG pipeline using hybrid retriever for semantic document retrieval
       - Built component lifecycle semantic business layer to support maintenance operations
       - Modernized NER pipeline from legacy architecture to SOTA transformer-based model, eliminating EOL dependency risk
       - Deployed and maintained CloudFoundry-hosted applications with GitLab CI/CD pipelines
@@ -67,21 +77,51 @@ work:
     date_end: 2021-08-01
     summary: |
       - Maintained Slurm/Cray HPC cluster and LustreFS supporting scientific computing for weather forecasting
+  - position: Linux Systems Engineer / QA
+    company_name: DirecTV
+    company_url: "https://www.directv.com"
+    location: El Segundo, CA
+    date_start: 2015-01-01
+    date_end: 2019-03-01
+    summary: |
+      - Developed Python-based automation for firmware deployment across 100+ set-top boxes
+      - Implemented Kanban workflow management using Jira for QA and delivery tracking
+      - Reduced deployment time through CI/CD pipeline optimization
+  - position: Linux Systems Engineer
+    company_name: Quadranet
+    company_url: "https://www.quadranet.com"
+    location: Los Angeles, CA
+    date_start: 2018-10-01
+    date_end: 2018-12-01
+    summary: |
+      - Provisioned and managed AWS VPC environments for hosted client infrastructure
+      - Supported network security and compliance requirements for enterprise clients
 
 skills:
-  - name: Technical Skills
+  - name: ML & AI
     items:
-      - Skill 1
-      - Skill 2
-      - Skill 3
-  - name: Professional Skills
+      - Transformers & Vision Transformers
+      - Deep Learning & Reinforcement Learning
+      - NLP & Named Entity Recognition
+      - RAG & Semantic Retrieval
+      - Time Series Forecasting
+      - Multimodal Pipelines
+  - name: Frameworks & Libraries
     items:
-      - Skill A
-      - Skill B
-      - Skill C
+      - PyTorch, TensorFlow, Keras
+      - LangChain, spaCy, Transformers
+      - Streamlit, Plotly, Grafana
+  - name: Data & Infrastructure
+    items:
+      - PostgreSQL, pgVector, Neo4j
+      - Dask, Airflow, SQL
+      - AWS, GCP, Azure, Docker, Kubernetes
+  - name: Languages & Tools
+    items:
+      - Python, R, C++, Java, Bash
+      - Git, GitLab CI/CD, Jenkins
+      - Tableau, RESTful APIs
 languages:
   - name: English
     percent: 100
-  - name: Another Language
-    percent: 75
 ---

@@ -1,3 +1,4 @@
+{{ define "main" }}
 <h2>📄 Resume & Experience</h2>
 {{ range where .Site.Pages "Type" "authors" }}
     <section class="resume-section">
@@ -88,3 +89,4 @@ a:hover {
     color: #764ba2;
 }
 </style>
+{{ end }}

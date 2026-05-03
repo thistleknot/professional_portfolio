@@ -1,0 +1,90 @@
+<h2>📄 Resume & Experience</h2>
+{{ range where .Site.Pages "Type" "authors" }}
+    <section class="resume-section">
+        <h3>{{ .Title }}</h3>
+        <p class="bio">{{ .Params.bio }}</p>
+        
+        {{ if .Params.work }}
+            <h4 style="color: #667eea; margin-top: 15px; margin-bottom: 10px;">Experience</h4>
+            {{ range .Params.work }}
+                <div class="job-item">
+                    <h5>{{ .position }}</h5>
+                    <p class="meta">{{ .company_name }} • {{ .location }}</p>
+                    <p>{{ .summary }}</p>
+                </div>
+            {{ end }}
+        {{ end }}
+
+        {{ if .Params.education }}
+            <h4 style="color: #667eea; margin-top: 15px; margin-bottom: 10px;">Education</h4>
+            {{ range .Params.education }}
+                <div class="edu-item">
+                    <h5>{{ .area }}</h5>
+                    <p class="meta">{{ .institution }}</p>
+                    <p>{{ .summary }}</p>
+                </div>
+            {{ end }}
+        {{ end }}
+    </section>
+{{ end }}
+
+<h2>🚀 Personal Projects</h2>
+{{ range .Site.Pages }}
+    {{ if and (eq .Section "projects") .File }}
+        {{ if strings.Contains .File.Dir "side-projects" }}
+            {{ if ne .Title "Side Projects" }}
+                <section class="project-section">
+                    <h3>{{ .Title }}</h3>
+                    <p>{{ .Summary }}</p>
+                    {{ if .Params.external_link }}
+                        <p><a href="{{ .Params.external_link }}">View Project →</a></p>
+                    {{ end }}
+                </section>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+<h2>💼 Work Achievements</h2>
+{{ range .Site.Pages }}
+    {{ if and (eq .Section "projects") .File }}
+        {{ if strings.Contains .File.Dir "work-projects" }}
+            {{ if ne .Title "Work Projects" }}
+                <section class="project-section">
+                    <h3>{{ .Title }}</h3>
+                    <p>{{ .Summary }}</p>
+                    <p><a href="{{ .RelPermalink }}">Read More →</a></p>
+                </section>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+<style>
+.job-item, .edu-item, .project-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.job-item:last-child, .edu-item:last-child, .project-section:last-child {
+    border-bottom: none;
+}
+.meta {
+    color: #999;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+.resume-section h3, .project-section h3, .resume-section h5, .project-section h5 {
+    color: #667eea;
+    margin: 10px 0 5px 0;
+}
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+    color: #764ba2;
+}
+</style>

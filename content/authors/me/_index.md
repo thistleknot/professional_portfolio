@@ -1,5 +1,5 @@
 ---
-title: Your Name
+title: Joshua C Laferriere
 role: Machine Learning & AI Engineer
 avatar:
   filename: avatar.jpg

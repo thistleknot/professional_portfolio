@@ -113,6 +113,16 @@
             color: #4a5568;
         }
         
+        ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+        
+        ul li {
+            margin-bottom: 6px;
+            color: #4a5568;
+        }
+        
         .job-item, .edu-item {
             margin-bottom: 25px;
             padding-bottom: 20px;
@@ -234,7 +244,7 @@
                 <div class="job-item">
                     <h5>{{ .position }}</h5>
                     <p class="meta">{{ .company_name }} • {{ .location }} • {{ dateFormat "Jan 2006" .date_start }}{{ if .date_end }} - {{ dateFormat "Jan 2006" .date_end }}{{ else }} - Present{{ end }}</p>
-                    <p>{{ .summary }}</p>
+                    {{ .summary | markdownify }}
                 </div>
             {{ end }}
         {{ end }}

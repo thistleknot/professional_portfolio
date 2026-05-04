@@ -57,8 +57,7 @@ work:
     date_start: 2023-11-01
     date_end: 2024-02-01
     summary: |
-      - Conducted A/B testing for NLP model deployment, achieving 15% reduction in model latency
-      - Developed dynamic programming solution for batching datasets, reducing training time by 30%
+      - A/B testing for NLP model deployment: 15% latency reduction; dynamic programming batching solution: 30% training time reduction
   - position: Systems Engineer III
     company_name: Boeing (Contractor)
     company_url: "https://www.boeing.com"
@@ -118,9 +117,8 @@ skills:
       - AWS, GCP, Azure, Docker, Kubernetes
   - name: Languages & Tools
     items:
-      - Python, R, C++, Java, Bash
-      - Git, GitLab CI/CD, Jenkins
-      - Tableau, RESTful APIs
+      - Python, Bash
+      - Git, GitLab CI/CD
 languages:
   - name: English
     percent: 100

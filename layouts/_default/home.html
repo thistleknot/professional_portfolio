@@ -1,3 +1,519 @@
-{{- define "main" -}}
-{{ partial "landing_page.html" . }}
-{{- end -}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f4f7fb;
+            --text: #243041;
+            --muted: #5b6878;
+            --line: #dde5ee;
+            --surface: #ffffff;
+            --surface-alt: #f8fbff;
+            --primary: #27496d;
+            --primary-strong: #102031;
+            --accent: #506680;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 0% 0%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 24%),
+                radial-gradient(circle at 100% 100%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 22%),
+                linear-gradient(135deg, #10161d 0%, #24364f 50%, #445263 100%);
+        }
+
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+            background: var(--surface);
+            min-height: 100vh;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .hero {
+            padding: 96px 48px 72px;
+            color: #ffffff;
+            text-align: center;
+            background:
+                radial-gradient(circle at 0% 0%, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 18%),
+                radial-gradient(circle at 100% 100%, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0) 18%),
+                linear-gradient(135deg, #0f1419 0%, #2a3f5f 52%, #465362 100%);
+        }
+
+        .eyebrow {
+            font-size: 0.85rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.82);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.9rem;
+            line-height: 1.05;
+            margin-bottom: 14px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+        }
+
+        .hero-role {
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .hero-bio {
+            max-width: 820px;
+            margin: 0 auto 28px;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.96);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.22);
+        }
+
+        .hero-links,
+        .tag-row,
+        .stats-grid,
+        .card-grid,
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .hero-links {
+            justify-content: center;
+            margin-bottom: 34px;
+        }
+
+        .hero-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 18px;
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 999px;
+            color: #ffffff;
+            background: rgba(255,255,255,0.08);
+            text-decoration: none;
+            font-weight: 600;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-link:hover {
+            background: rgba(255,255,255,0.16);
+            text-decoration: none;
+        }
+
+        .stats-grid {
+            justify-content: center;
+        }
+
+        .stat-card {
+            min-width: 170px;
+            padding: 18px 20px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.16);
+            backdrop-filter: blur(8px);
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.65rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.84);
+        }
+
+        main {
+            padding: 56px 48px 72px;
+        }
+
+        section {
+            margin-bottom: 56px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--line);
+        }
+
+        .section-intro {
+            max-width: 860px;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .tag-row {
+            gap: 10px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            background: #edf3f8;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface-alt);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px 22px 20px;
+            box-shadow: 0 6px 16px rgba(16,32,49,0.04);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .card-meta {
+            font-size: 0.84rem;
+            color: #6c7b8d;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .card-actions {
+            margin-top: 12px;
+        }
+
+        .card-link {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 20px;
+            background: var(--surface);
+        }
+
+        .skill-card h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item {
+            padding: 0 0 24px 22px;
+            border-left: 2px solid var(--line);
+            margin-left: 8px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 2px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        .timeline-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .timeline-meta {
+            font-size: 0.9rem;
+            color: #6c7b8d;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .timeline-item ul {
+            margin: 0 0 0 18px;
+            color: var(--muted);
+        }
+
+        .timeline-item li {
+            margin-bottom: 6px;
+        }
+
+        .cta-panel {
+            padding: 28px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #e8eef5 0%, #f5f7fb 55%, #dfe8f2 100%);
+            border: 1px solid #d6e0ea;
+        }
+
+        .cta-panel h2 {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 28px 40px;
+            background: #f5f7fb;
+            color: #718096;
+            border-top: 1px solid var(--line);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 960px) {
+            .card-grid,
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .hero {
+                padding: 72px 24px 56px;
+            }
+
+            .hero h1 {
+                font-size: 2.9rem;
+            }
+
+            main {
+                padding: 40px 24px 56px;
+            }
+
+            .card-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card {
+                min-width: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        {{ range where .Site.Pages "Type" "authors" }}
+        <header class="hero">
+            <div class="eyebrow">Professional Portfolio</div>
+            <h1>{{ .Title }}</h1>
+            <div class="hero-role">{{ .Params.role }}</div>
+            <p class="hero-bio">{{ .Params.bio }}</p>
+
+            <div class="hero-links">
+                {{ range .Params.social }}
+                    <a class="hero-link" href="{{ .link }}">
+                        {{ if eq .icon "github" }}GitHub{{ else if eq .icon "linkedin" }}LinkedIn{{ else if eq .icon "soundcloud" }}SoundCloud{{ else }}Profile{{ end }}
+                    </a>
+                {{ end }}
+                <a class="hero-link" href="#projects">Projects</a>
+                <a class="hero-link" href="#experience">Experience</a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">12+ Years</span>
+                    <span class="stat-label">Across aerospace, media, and finance</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">13 Projects</span>
+                    <span class="stat-label">Side projects spanning AI, quant, and media</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">Production + Research</span>
+                    <span class="stat-label">Real systems, experimentation, and technical range</span>
+                </div>
+            </div>
+        </header>
+        {{ end }}
+
+        <main>
+            {{ range where .Site.Pages "Type" "authors" }}
+            <section>
+                <h2>Focus Areas</h2>
+                <p class="section-intro">A portfolio this broad only works if the throughline is clear: semantic systems, production reliability, research fluency, and comfort across multiple technical media.</p>
+                <div class="tag-row">
+                    {{ range .Params.interests }}
+                        <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </section>
+            {{ end }}
+
+            <section id="projects">
+                <h2>Selected Personal Projects</h2>
+                <p class="section-intro">The strongest differentiator here is range: reasoning model training, agentic tooling, retrieval, quantitative research, optimization, music information retrieval, and electronic production.</p>
+                <div class="card-grid">
+                    {{ range .Site.RegularPages.ByDate.Reverse }}
+                        {{ if and (eq .Section "projects") .File (strings.Contains .File.Dir "side-projects") (ne .Title "Side Projects") }}
+                            <article class="card">
+                                <div class="card-meta">{{ dateFormat "2006" .Date }}</div>
+                                <h3>{{ .Title }}</h3>
+                                <p>{{ .Summary }}</p>
+                                {{ with .Params.tags }}
+                                    <div class="tag-row">
+                                        {{ range first 4 . }}
+                                            <span class="tag">{{ . }}</span>
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                                <div class="card-actions">
+                                    <a class="card-link" href="{{ if .Params.external_link }}{{ .Params.external_link }}{{ else }}{{ .RelPermalink }}{{ end }}">
+                                        {{ if .Params.external_link }}View Project →{{ else }}Read More →{{ end }}
+                                    </a>
+                                </div>
+                            </article>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </section>
+
+            <section>
+                <h2>Selected Work Systems</h2>
+                <p class="section-intro">These are the work efforts that best demonstrate business value, operational reliability, and the ability to turn ML and infrastructure work into measurable outcomes.</p>
+                <div class="card-grid">
+                    {{ range .Site.RegularPages.ByDate.Reverse }}
+                        {{ if and (eq .Section "projects") .File (strings.Contains .File.Dir "work-projects") (ne .Title "Work Projects") }}
+                            <article class="card">
+                                <div class="card-meta">{{ dateFormat "Jan 2006" .Date }}</div>
+                                <h3>{{ .Title }}</h3>
+                                <p>{{ .Summary }}</p>
+                                {{ with .Params.tags }}
+                                    <div class="tag-row">
+                                        {{ range first 4 . }}
+                                            <span class="tag">{{ . }}</span>
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                                <div class="card-actions">
+                                    <a class="card-link" href="{{ .RelPermalink }}">Read Case Study →</a>
+                                </div>
+                            </article>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </section>
+
+            {{ range where .Site.Pages "Type" "authors" }}
+            <section>
+                <h2>Technical Breadth</h2>
+                <div class="skills-grid">
+                    {{ range .Params.skills }}
+                        <article class="skill-card">
+                            <h3>{{ .name }}</h3>
+                            <div class="tag-row">
+                                {{ range .items }}
+                                    <span class="tag">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                        </article>
+                    {{ end }}
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                {{ range .Params.work }}
+                    <article class="timeline-item">
+                        <div class="timeline-title">{{ .position }}</div>
+                        <div class="timeline-meta">{{ .company_name }} • {{ .location }} • {{ dateFormat "Jan 2006" .date_start }}{{ if .date_end }} - {{ dateFormat "Jan 2006" .date_end }}{{ else }} - Present{{ end }}</div>
+                        {{ .summary | markdownify }}
+                    </article>
+                {{ end }}
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                {{ range .Params.education }}
+                    <article class="timeline-item">
+                        <div class="timeline-title">{{ .area }}</div>
+                        <div class="timeline-meta">{{ .institution }} • {{ dateFormat "2006" .date_start }}-{{ dateFormat "2006" .date_end }}</div>
+                        <p>{{ .summary }}</p>
+                    </article>
+                {{ end }}
+            </section>
+            {{ end }}
+
+            <section class="cta-panel">
+                <h2>Open to the right ML / AI engineering opportunity</h2>
+                <p>I work best where semantic AI, production engineering, retrieval systems, and research fluency intersect. The side projects are there to show range, not novelty theater.</p>
+                <p>That range now includes technical media work as well — from music embeddings and clustering to FL Studio-based electronic production.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Joshua C Laferriere</strong></p>
+            <p>
+                <a href="https://github.com/thistleknot">GitHub</a> •
+                <a href="https://linkedin.com/in/joshualaferriere">LinkedIn</a> •
+                <a href="https://soundcloud.com/user-344326160">SoundCloud</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

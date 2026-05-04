@@ -1,23 +1,74 @@
-{{ define "main" }}
-
-{{ partial "components/cover.html" . }}
-
-<div class="mx-auto max-w-screen-lg px-6 pt-4 pb-12">
-  <article class="prose prose-slate lg:prose-xl dark:prose-invert max-w-none">
-    <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ .Title }}</h1>
-
-    <div class="mt-4 mb-10 text-sm text-slate-500 dark:text-slate-300">
-      {{ if .Date }}
-        <span>{{ (.Date) | time.Format (site.Params.hugoblox.locale.date_format | default ":date_long") }}</span>
-      {{ end }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Page.Title }} - Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        main {
+            padding: 40px;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+        .content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+        <main>
+            <div class="content">
+                {{ .Content }}
+            </div>
+        </main>
+        <footer>
+            <p>📄 Portfolio Project Page | Built with HugoBlox</p>
+        </footer>
     </div>
-
-    <div class="mb-8">
-      {{ partial "page_links_div.html" . }}
-    </div>
-
-    {{ .Content }}
-  </article>
-</div>
-
-{{ end }}
+</body>
+</html>

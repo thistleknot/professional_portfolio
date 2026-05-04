@@ -4,13 +4,14 @@ role: Machine Learning & AI Engineer
 avatar:
   filename: avatar.jpg
 bio: |
-  ML Engineer specializing in production NLP, semantic systems (RAG, pgVector, knowledge graphs), and neurosymbolic AI. 12+ years across aerospace, media, finance. Built SOTA transformer pipelines, domain-specific retrievers, and deployed resilient systems at scale. Active in SOTA research integration and agentic AI orchestration.
+  ML Engineer specializing in production NLP, semantic systems (RAG, pgVector, knowledge graphs), and neurosymbolic AI. 12+ years across aerospace, media, finance. Built SOTA transformer pipelines, domain-specific retrievers, and deployed resilient systems at scale. Also works across technical media workflows, including music embeddings and electronic production.
 interests:
   - Semantic AI & Knowledge Graphs
   - RAG & Retrieval Systems
   - Agentic Orchestration
   - SOTA Research Integration
   - Transformers & Neurosymbolic Systems
+  - Electronic Music Production & Audio Workflows
 social:
   - icon: github
     icon_pack: fab
@@ -18,6 +19,9 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://linkedin.com/in/joshualaferriere
+  - icon: soundcloud
+    icon_pack: fab
+    link: https://soundcloud.com/user-344326160
 organizations:
   - name: Boeing
     url: "https://www.boeing.com"

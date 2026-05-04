@@ -1,8 +1,8 @@
 ---
 title: "Soft Policy Optimization: Reasoning Model Training"
 date: 2026-03-15
-external_link: ""
-summary: "Fine-tuned Qwen3.5-0.6B reasoning model using soft policy optimization with soft quality gates on quotes dataset. Production training pipeline with reward shaping and soft constraint validation. Demonstrates SOTA training methodologies for efficient reasoning models."
+external_link: "https://github.com/thistleknot/spo-reasoning-training-regimen"
+summary: "Complete pipeline for generating synthetic reasoning datasets and training Qwen3.5-0.6B models with soft policy optimization. Three-phase workflow: synthetic dataset generation (LLM-powered triplet extraction), QLoRA fine-tuning, and SPO confidence calibration. Demonstrates production infrastructure for efficient reasoning models."
 tags:
   - reasoning-models
   - policy-optimization
@@ -13,37 +13,50 @@ tags:
 
 ## Soft Policy Optimization: Reasoning Model Training
 
-Production training pipeline implementing soft policy optimization on Qwen3.5-0.6B for improved reasoning capabilities on curated quotes dataset.
+Complete production pipeline for building reasoning models through three phases: synthetic dataset generation, QLoRA fine-tuning, and SPO confidence calibration.
 
-### Approach
+### Three-Phase Architecture
 
-**Model & Dataset:**
-- Base: Qwen3.5-0.6B (efficient, reasoning-capable)
-- Training data: Quotes dataset with diverse reasoning patterns
-- Scale: Optimized for inference efficiency + quality
+**Phase 1: Synthetic Dataset Generation**
+- Extracts structured reasoning from quotes dataset
+- Generates triplets (subject | predicate | object) with evidence tags
+- Produces pedagogical ordering: Non-Entailed (negatives) → Entailed (positives) → Throughline (summary)
+- Supports multiple LLM backends: GPT-4, Qwen, Claude, HuggingFace models, or manual templates
+- Confidence tags are NOT training labels — they emerge during inference
 
-**Soft Policy Optimization:**
-- Reward shaping: Multi-dimensional signal (correctness, coherence, brevity)
-- Soft quality gates: Probabilistic constraints instead of hard cutoffs
-- Temperature-scaled policy updates for exploration/exploitation balance
-- Adaptive learning rate scheduling based on reward trajectory
+**Phase 2: QLoRA Fine-Tuning**
+- Base model: Qwen3.5-0.6B (efficient, reasoning-capable)
+- 4-bit quantization for 8GB VRAM efficiency
+- Configurable rank, learning rate, epoch scheduling
+- Multi-GPU support with gradient accumulation
+- WandB/TensorBoard monitoring of training curves
 
-**Infrastructure:**
-- Distributed training across available hardware
-- Gradient accumulation for effective batch scaling
-- Checkpointing and validation checkpoints every N steps
-- TensorBoard monitoring of reward metrics and loss curves
+**Phase 3: SPO Confidence Optimization**
+- Learns accurate confidence calibration using downstream task rewards
+- Reward signal: correctness × confidence (only high-confidence correct outputs rewarded)
+- Bridges supervised fine-tuning and pure RL
+- Ensures model is confident when right, uncertain when wrong
 
 ### Technical Insights
 
-Soft policy optimization bridges supervised fine-tuning and pure RL — the quality gates are soft constraints with learnable thresholds rather than binary rejection. This prevents training instability while maintaining tighter control than standard SFT.
+Soft policy optimization uses soft constraints with learnable thresholds rather than binary rejection, preventing training instability while maintaining tighter control than standard supervised fine-tuning.
 
-Reasoning on constrained datasets (quotes) requires balancing:
-- **Coherence**: Multi-turn reasoning chains must be logically sound
-- **Efficiency**: 0.6B model has limited capacity; every parameter matters
-- **Adherence**: Staying true to source material while generalizing patterns
+The key design principle: **confidence is emergent**, not a training label. This enables:
+- Separation of structure learning from calibration
+- Better transfer to new tasks
+- Interpretable confidence scores (confidence ≈ actual accuracy)
+- Avoidance of confidence overfitting to training data
+
+### Data Format: Pedagogical Ordering
+
+Training data follows Non-Entailed → Entailed → Throughline structure because:
+1. **Negative inference first** — Model learns what's irrelevant
+2. **Contrastive learning** — Discriminate true from false facts  
+3. **Better convergence** — Explicit negatives improve final performance
 
 ### Results
 
-Model achieves improved reasoning trajectory on validation set while maintaining inference efficiency. Demonstrates feasibility of SOTA training techniques on resource-constrained architectures.
+Model achieves improved reasoning trajectory on validation set while maintaining inference efficiency, demonstrating feasibility of SOTA training techniques on resource-constrained architectures.
+
+**Repository**: Full source code, documentation, training scripts, and data format specifications available on GitHub.
 

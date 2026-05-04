@@ -369,7 +369,7 @@
             <div class="hero-links">
                 {{ range .Params.social }}
                     <a class="hero-link" href="{{ .link }}">
-                        {{ if eq .icon "github" }}GitHub{{ else if eq .icon "linkedin" }}LinkedIn{{ else if eq .icon "soundcloud" }}SoundCloud{{ else }}Profile{{ end }}
+                        {{ if eq .icon "github" }}GitHub{{ else if eq .icon "linkedin" }}LinkedIn{{ else if eq .icon "soundcloud" }}Audio Experiments{{ else }}Profile{{ end }}
                     </a>
                 {{ end }}
                 <a class="hero-link" href="#projects">Projects</a>
@@ -379,7 +379,7 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <span class="stat-value">12+ Years</span>
-                    <span class="stat-label">Across aerospace, media, and finance</span>
+                    <span class="stat-label">Across aerospace, government, media, and finance</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-value">13 Projects</span>
@@ -397,7 +397,7 @@
             {{ with $author }}
             <section>
                 <h2>Focus Areas</h2>
-                <p class="section-intro">A portfolio this broad only works if the throughline is clear: semantic systems, production reliability, research fluency, and comfort across multiple technical media.</p>
+
                 <div class="tag-row">
                     {{ range .Params.interests }}
                         <span class="tag">{{ . }}</span>
@@ -408,12 +408,12 @@
 
             <section id="projects">
                 <h2>Selected Personal Projects</h2>
-                <p class="section-intro">The strongest differentiator here is range: reasoning model training, agentic tooling, retrieval, quantitative research, optimization, music information retrieval, and electronic production.</p>
+                <p class="section-intro">Aerospace and government work is NDA-constrained. Independent projects are where methodology is visible.</p>
                 <div class="card-grid">
                     {{ range .Site.RegularPages.ByDate.Reverse }}
                         {{ if and (eq .Section "projects") .File (strings.Contains .File.Dir "side-projects") (ne .Title "Side Projects") }}
                             <article class="card">
-                                <div class="card-meta">{{ dateFormat "2006" .Date }}</div>
+                                <div class="card-meta">{{ if ge (int (dateFormat "2006" .Date)) 2025 }}Active{{ else }}{{ dateFormat "2006" .Date }}{{ end }}</div>
                                 <h3>{{ .Title }}</h3>
                                 <p>{{ .Summary }}</p>
                                 {{ with .Params.tags }}

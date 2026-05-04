@@ -2,7 +2,7 @@
 title: "Algorithmic Investment Platform & ArXiv Research Integration"
 date: 2026-04-15
 external_link: ""
-summary: "End-to-end algorithmic trading platform with distributed data infrastructure (PostgreSQL, Dask, 40GB VRAM, 22-core homelab). Systematic ArXiv paper tracking integrated with quantitative research workflows. Direct bridge between academic ML/finance literature and production trading systems."
+summary: "Algorithmic trading research platform bridging ArXiv literature discovery with quantitative strategy backtesting. Paper-to-strategy pipeline: academic ML/finance research through to production implementation on live market data."
 tags:
   - investment-tech
   - quantitative-finance

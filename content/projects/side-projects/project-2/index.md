@@ -2,7 +2,7 @@
 title: "Agentic AI Orchestration Layer"
 date: 2026-04-15
 external_link: ""
-summary: "Custom orchestration layer coordinating Claude Code, GitHub Copilot CLI, OpenCode, and Codex as unified multi-agent system. Demonstrates cutting-edge agentic patterns (ReAct, hierarchical planning, tool grounding) applied to autonomous software engineering at scale."
+summary: "Task-routing harness and dispatch layer for multi-agent software engineering. Implements agent-selection logic, context propagation, and coherence gates that coordinate autonomous coding agents across planning, execution, and verification phases."
 tags:
   - agentic-systems
   - multi-agent

@@ -2,7 +2,7 @@
 title: "Generative AI Studio: ComfyUI & Open-WebUI Orchestration"
 date: 2026-04-15
 external_link: ""
-summary: "Self-hosted generative AI platform integrating ComfyUI node-based workflows with Open-WebUI's unified LLM interface. Active SOTA experimentation with latest diffusion models, multimodal pipelines, and real-time GPU orchestration across 40GB VRAM homelab infrastructure."
+summary: "Self-hosted generative AI platform integrating ComfyUI node-based workflows with Open-WebUI's unified LLM interface. Active SOTA experimentation across diffusion models, multimodal pipelines, and GPU inference."
 tags:
   - comfyui
   - open-webui

@@ -4,14 +4,14 @@ role: Machine Learning & AI Engineer
 avatar:
   filename: avatar.jpg
 bio: |
-  ML Engineer specializing in production NLP, semantic systems (RAG, pgVector, knowledge graphs), and neurosymbolic AI. 12+ years across aerospace, media, finance. Built SOTA transformer pipelines, domain-specific retrievers, and deployed resilient systems at scale.
+  ML Engineer specializing in production NLP, semantic systems (RAG, pgVector, knowledge graphs), and neurosymbolic AI. 12+ years across aerospace, government, media, and finance. Built SOTA transformer pipelines, domain-specific retrievers, and deployed resilient systems at scale.
 interests:
   - Semantic AI & Knowledge Graphs
   - RAG & Retrieval Systems
   - Agentic Orchestration
   - SOTA Research Integration
   - Transformers & Neurosymbolic Systems
-  - Media Experimentation & Audio Embeddings
+  - Music Information Retrieval
 social:
   - icon: github
     icon_pack: fab

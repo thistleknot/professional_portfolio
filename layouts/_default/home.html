@@ -357,8 +357,9 @@
     </style>
 </head>
 <body>
+    {{ $author := site.GetPage "/authors/me" }}
     <div class="page">
-        {{ range where .Site.Pages "Type" "authors" }}
+        {{ with $author }}
         <header class="hero">
             <div class="eyebrow">Professional Portfolio</div>
             <h1>{{ .Title }}</h1>
@@ -393,7 +394,7 @@
         {{ end }}
 
         <main>
-            {{ range where .Site.Pages "Type" "authors" }}
+            {{ with $author }}
             <section>
                 <h2>Focus Areas</h2>
                 <p class="section-intro">A portfolio this broad only works if the throughline is clear: semantic systems, production reliability, research fluency, and comfort across multiple technical media.</p>
@@ -459,7 +460,7 @@
                 </div>
             </section>
 
-            {{ range where .Site.Pages "Type" "authors" }}
+            {{ with $author }}
             <section>
                 <h2>Technical Breadth</h2>
                 <div class="skills-grid">

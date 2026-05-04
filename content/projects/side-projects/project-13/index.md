@@ -2,7 +2,7 @@
 title: "Electronic Music Production: DJ Tekné"
 date: 2024-06-01
 external_link: "https://soundcloud.com/user-344326160"
-summary: "Electronic music production and DJ work using Fruity Loops (FL Studio). Remixes spanning house, progressive, and electronic genres. Demonstrates proficiency with digital audio workstations, audio signal processing, and creative synthesis—extending technical expertise across media production domains."
+summary: "Hobbyist electronic music production and DJ remix work using Fruity Loops (FL Studio). Included to show hands-on exposure to DAW workflows, audio signal processing concepts, and creative tooling outside core ML work."
 tags:
   - music-production
   - fruity-loops
@@ -14,7 +14,7 @@ tags:
 
 ## Electronic Music Production: DJ Tekné
 
-Creative work in electronic music production and DJ remixing, showcasing technical proficiency across digital audio workstations and signal processing.
+Creative hobby work in electronic music production and DJ remixing, included to show some hands-on exposure to digital audio workstations and signal-processing-oriented workflows.
 
 ### Production Environment
 
@@ -31,13 +31,13 @@ Creative work in electronic music production and DJ remixing, showcasing technic
 - Audio mastering and frequency balancing
 - Real-time DJ performance
 
-### Technical Skills in Music Production
+### What I Explored
 
-Electronic music production translates directly to signal processing competency:
-- **Audio Signal Processing**: Filtering, compression, EQ, spatial effects (reverb, delay)
-- **Synthesis & Sound Design**: Understanding oscillators, envelopes (ADSR), modulation
-- **Frequency Domain Analysis**: FFT-based spectral analysis for mixing decisions
-- **Real-time Performance**: Low-latency audio routing, MIDI control, live parameter modulation
+This project gave me practical exposure to:
+- **Audio Signal Processing Concepts**: Filtering, compression, EQ, and spatial effects
+- **Synthesis Basics**: Oscillators, envelopes (ADSR), and modulation
+- **Frequency-Domain Thinking**: Spectral analysis and balancing decisions during mixing
+- **DAW Workflow Familiarity**: Sequencing, automation, routing, and arrangement
 
 ### Notable Work
 
@@ -49,8 +49,8 @@ Progressive house remix transforming the original track through:
 - Dynamic arrangement building tension and release
 - Professional mastering across frequency spectrum
 
-### Why This Matters
+### Why It Is Included
 
-Music production demonstrates **creative problem-solving across domains**—the same principles of optimization, signal processing, and constraint management that apply to ML pipelines apply to audio engineering. Proficiency across diverse technical domains (AI/ML, systems infrastructure, audio production) signals adaptability and deep technical breadth.
+This is not meant to position music production as a core professional specialization. It is included to show curiosity, range, and some practical experimentation with another technical medium adjacent to embeddings, clustering, and signal-oriented thinking.
 
 Listen on [SoundCloud](https://soundcloud.com/user-344326160) for full catalog of remixes and original compositions.

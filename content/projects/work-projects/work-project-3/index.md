@@ -4,7 +4,7 @@ date: 2022-02-15
 image:
   filename: "work-project3.png"
   preview_only: false
-summary: "Engineered unified authentication system across Windows and Linux infrastructure for aerospace contractor, ensuring DFARS/NIST compliance. Designed scalable infrastructure modernization supporting 500+ users and enabling secure access to sensitive DoD systems."
+summary: "Configured OpenLDAP and Samba to provide unified authentication across Windows and Linux systems for a lab environment on an isolated network, as a contractor supporting Boeing Oklahoma City."
 tags:
   - infrastructure
   - security

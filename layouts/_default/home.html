@@ -408,7 +408,7 @@
 
             <section id="projects">
                 <h2>Selected Personal Projects</h2>
-                <p class="section-intro">Aerospace and government work is NDA-constrained. Independent projects are where methodology is visible.</p>
+                <p class="section-intro">Independent projects where methodology and implementation are fully visible.</p>
                 <div class="card-grid">
                     {{ range .Site.RegularPages.ByDate.Reverse }}
                         {{ if and (eq .Section "projects") .File (strings.Contains .File.Dir "side-projects") (ne .Title "Side Projects") }}

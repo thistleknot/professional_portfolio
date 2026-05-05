@@ -1,6 +1,6 @@
 ---
 title: Joshua C Laferriere
-role: Machine Learning & AI Engineer
+role: Machine Learning Engineer
 avatar:
   filename: avatar.jpg
 bio: |

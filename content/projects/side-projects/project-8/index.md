@@ -16,6 +16,8 @@ tags:
 
 Interactive music discovery and recommendation system using high-dimensional audio embeddings projected to 3D space via UMAP. Hierarchical clustering reveals semantic music similarity across 751-song corpus.
 
+![Artist Correlation Graph](artist_correlation_graph.png)
+
 ### Architecture
 
 **Embedding Pipeline:**

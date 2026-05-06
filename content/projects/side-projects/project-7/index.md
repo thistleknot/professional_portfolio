@@ -1,7 +1,7 @@
 ---
 title: "Labor Optimizer: Min-Max Algorithm for Dwarf Fortress"
 date: 2012-06-01
-external_link: "https://www.youtube.com/watch?v=Jz_6hMZahU4&t=702s"
+external_link: "https://www.youtube.com/watch?v=Jz_6hMZahU4&t=82s"
 summary: "3-year collaborative algorithm development for labor optimization in Dwarf Fortress. Modified min-max transform with statistical measures (means, medians). Demonstrated at Bay12Games developer conference. Implemented in C++ and deployed in Dwarf Therapist tool suite."
 tags:
   - algorithms
@@ -48,5 +48,8 @@ Transformed manual labor assignment from hours of spreadsheet work into automate
 
 - [Dwarf Therapist GitHub](https://github.com/thistleknot/Labor-Optimizer-Original)
 - Bay12Games and Bay12Forums discussions
-- YouTube presentation: [Algorithm walkthrough and live demonstration](https://www.youtube.com/watch?v=Jz_6hMZahU4&t=702s)
+- YouTube presentation:
+  - [Introduction (1:22)](https://www.youtube.com/watch?v=Jz_6hMZahU4&t=82s)
+  - [Algorithm walkthrough (6:34)](https://www.youtube.com/watch?v=Jz_6hMZahU4&t=394s)
+  - [Demonstration (7:20)](https://www.youtube.com/watch?v=Jz_6hMZahU4&t=440s)
 

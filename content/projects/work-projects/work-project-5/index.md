@@ -1,10 +1,10 @@
 ---
-title: "Safety Message Drafting Acceleration - Boeing"
+title: "Safety Message Drafting Acceleration"
 date: 2024-09-01
 image:
   filename: "work-project5.png"
   preview_only: false
-summary: "Developed a RAG-based system at Boeing to reduce flow time for drafting safety messages, using structured JSON schema output and hallucination detection to ensure reliable, grounded generation."
+summary: "Developed a RAG-based system to reduce flow time for drafting safety messages, using structured JSON schema output and hallucination detection to ensure reliable, grounded generation."
 tags:
   - rag-systems
   - safety
@@ -14,11 +14,11 @@ tags:
 
 ## Safety Message Drafting Acceleration
 
-**Industry/Domain:** Aerospace & Defense (Boeing)
+**Industry/Domain:** Aerospace & Defense
 
 **My Role:** Data Scientist & AI Engineer
 
-**Timeline:** Boeing (2022 – Present)
+**Timeline:** 2022 – Present
 
 ## Key Contributions
 

@@ -1,10 +1,10 @@
 ---
-title: "VPS Migrations & Client Infrastructure - Quadranet"
+title: "VPS Migrations & Client Infrastructure"
 date: 2018-12-01
 image:
   filename: "work-project6.png"
   preview_only: false
-summary: "Performed live and cold VPS migrations between physical hosts for hosted client infrastructure at Quadranet, a managed hosting provider, minimizing downtime and maintaining service continuity."
+summary: "Performed live and cold VPS migrations between physical hosts for a managed hosting provider, minimizing downtime and maintaining service continuity."
 tags:
   - infrastructure
   - linux

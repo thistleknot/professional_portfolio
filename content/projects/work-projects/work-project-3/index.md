@@ -1,10 +1,10 @@
 ---
-title: "Unified Authentication & Infrastructure Modernization - Boeing"
+title: "Unified Authentication & Infrastructure Modernization"
 date: 2022-02-15
 image:
   filename: "work-project3.png"
   preview_only: false
-summary: "Configured OpenLDAP and Samba to provide unified authentication across Windows and Linux systems for a lab environment on an isolated network, as a contractor supporting Boeing Oklahoma City."
+summary: "Configured OpenLDAP and Samba to provide unified authentication across Windows and Linux systems for a lab environment on an isolated network, as a contractor in aerospace."
 tags:
   - infrastructure
   - security
@@ -14,7 +14,7 @@ tags:
 
 ## Unified Authentication & Infrastructure Modernization
 
-**Industry/Domain:** Aerospace & Defense (Boeing Contractor - Oklahoma City)
+**Industry/Domain:** Aerospace & Defense (Contractor)
 
 **My Role:** Systems Engineer III
 

@@ -1,5 +1,5 @@
 ---
-title: "NLP Model Optimization & A/B Testing - Vennify"
+title: "NLP Model Optimization & A/B Testing"
 date: 2024-02-15
 image:
   filename: "work-project2.png"
@@ -14,7 +14,7 @@ tags:
 
 ## NLP Model Optimization & Performance Engineering
 
-**Industry/Domain:** FinTech / AI Services (Vennify.com)
+**Industry/Domain:** FinTech / AI Services
 
 **My Role:** AI Engineer Consultant
 

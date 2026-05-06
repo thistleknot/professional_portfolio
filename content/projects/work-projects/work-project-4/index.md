@@ -1,10 +1,10 @@
 ---
-title: "NER Pipeline Modernization - Boeing"
+title: "NER Pipeline Modernization"
 date: 2023-06-01
 image:
   filename: "work-project4.png"
   preview_only: false
-summary: "Migrated a legacy rule-based Named Entity Recognition pipeline to a SOTA transformer-based model at Boeing, eliminating an EOL dependency while preserving domain-specific accuracy on aerospace maintenance documentation."
+summary: "Migrated a legacy rule-based Named Entity Recognition pipeline to a SOTA transformer-based model, eliminating an EOL dependency while preserving domain-specific accuracy on aerospace maintenance documentation."
 tags:
   - nlp
   - transformer-models
@@ -14,7 +14,7 @@ tags:
 
 ## NER Pipeline Modernization
 
-**Industry/Domain:** Aerospace & Defense (Boeing)
+**Industry/Domain:** Aerospace & Defense
 
 **My Role:** Data Scientist & AI Engineer
 

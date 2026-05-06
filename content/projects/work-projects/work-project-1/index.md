@@ -1,10 +1,10 @@
 ---
-title: "Domain-Specific RAG Pipeline - Boeing"
+title: "Domain-Specific RAG Pipeline"
 date: 2024-06-01
 image:
   filename: "work-project1.png"
   preview_only: false
-summary: "Built a production-grade RAG pipeline for aerospace maintenance documentation at Boeing, combining dense vector search with BM25 retrieval and a domain-specific semantic layer to support operations analysts."
+summary: "Built a production-grade RAG pipeline for aerospace maintenance documentation, combining dense vector search with BM25 retrieval and a domain-specific semantic layer to support operations analysts."
 tags:
   - rag-systems
   - nlp
@@ -14,7 +14,7 @@ tags:
 
 ## Domain-Specific RAG Pipeline
 
-**Industry/Domain:** Aerospace & Defense (Boeing)
+**Industry/Domain:** Aerospace & Defense
 
 **My Role:** Data Scientist & AI Engineer
 

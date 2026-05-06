@@ -4,7 +4,7 @@ date: 2024-09-01
 image:
   filename: "work-project5.png"
   preview_only: false
-summary: "Developed a RAG-based system to reduce flow time for drafting high-impact critical documents, using structured JSON schema output and hallucination detection to ensure reliable, grounded generation."
+summary: "Developed a RAG-based system to reduce flow time for drafting high-impact critical documents, saving 364 engineering hours per quarter through structured JSON schema output and hallucination detection."
 tags:
   - rag-systems
   - hallucination-detection
@@ -18,6 +18,10 @@ tags:
 **My Role:** Data Scientist & AI Engineer
 
 **Timeline:** 2022 – Present
+
+## Impact
+
+- **364 engineering hours saved per quarter** through automated drafting assistance
 
 ## Key Contributions
 

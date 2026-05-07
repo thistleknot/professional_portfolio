@@ -18,6 +18,12 @@ tags:
 
 Production-grade personal investment system combining sophisticated data engineering, machine learning research, and distributed computing infrastructure. Active integration of latest ArXiv findings into quantitative strategy development.
 
+### Regime Detection via Rolling Correlation
+
+![Business Regime Detection — Rolling Median Correlation](geo_candidate_correlation_regime_benchmark.png)
+
+Cross-asset rolling median correlation as a signal for business cycle regime identification. Shifts in correlation structure between asset classes mark transitions between expansion, contraction, and inflection regimes — enabling dynamic portfolio positioning ahead of macroeconomic turning points.
+
 ### Infrastructure (Homelab)
 - **Compute Cluster**: 22 CPU cores, 176GB RAM, 40GB VRAM, 5TB SSD storage
 - **Distributed Processing**: Dask cluster for parallelized backtests, correlation analysis, parameter sweeps

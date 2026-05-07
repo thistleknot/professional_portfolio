@@ -4,7 +4,7 @@ date: 2024-09-01
 image:
   filename: "work-project5.png"
   preview_only: false
-summary: "Developed a RAG-based system to reduce flow time for drafting high-impact critical documents, saving 364 engineering hours per quarter through structured JSON schema output and hallucination detection."
+summary: "Developed a RAG-based system to reduce flow time for drafting high-impact critical documents, saving 400 engineering hours per quarter through structured JSON schema output and hallucination detection."
 tags:
   - rag-systems
   - hallucination-detection
@@ -21,7 +21,7 @@ tags:
 
 ## Impact
 
-- **364 engineering hours saved per quarter** through automated drafting assistance
+- **400 engineering hours saved per quarter** through automated drafting assistance
 
 ## Key Contributions
 

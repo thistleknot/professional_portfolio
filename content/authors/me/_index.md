@@ -53,10 +53,9 @@ work:
       - Built component lifecycle semantic business layer to support maintenance operations
       - Modernized NER pipeline from legacy architecture to SOTA transformer-based model, eliminating EOL dependency risk
       - Deployed and maintained CloudFoundry-hosted applications with GitLab CI/CD pipelines
-      - Agile practitioner using Jira and Azure DevOps across data science and engineering teams
+      - Agile practitioner using Jira across data science and engineering teams
   - position: AI Engineer Consultant
     company_name: Vennify.com
-    company_url: "https://vennify.com"
     location: Remote
     date_start: 2023-11-01
     date_end: 2024-02-01
@@ -97,7 +96,7 @@ work:
     date_start: 2018-10-01
     date_end: 2018-12-01
     summary: |
-      - Provisioned and managed AWS VPC environments for hosted client infrastructure
+      - Provisioned and managed CloudFoundry infrastructure for hosted client environments
       - Supported network security and compliance requirements for enterprise clients
 
 skills:
@@ -118,7 +117,7 @@ skills:
     items:
       - PostgreSQL, pgVector, Neo4j
       - Dask, Airflow, SQL
-      - AWS, GCP, Azure, Docker, Kubernetes
+      - CloudFoundry, Docker, Kubernetes
   - name: Languages & Tools
     items:
       - Python, Bash

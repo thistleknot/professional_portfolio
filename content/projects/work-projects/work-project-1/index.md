@@ -36,7 +36,7 @@ tags:
 **Deployment & Infrastructure**
 - Deployed CloudFoundry-hosted applications with GitLab CI/CD pipelines
 - Monitoring dashboards tracking query performance and system health
-- Collaborated with Agile teams using Jira and Azure DevOps
+- Collaborated with Agile teams using Jira
 
 ## Technologies Used
 

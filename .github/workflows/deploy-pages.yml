@@ -24,8 +24,12 @@ jobs:
           hugo-version: '0.161.0'
           extended: true
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build with Hugo
-        run: hugo --minify --destination public
+        run: hugo --minify --destination public --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3

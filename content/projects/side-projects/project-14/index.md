@@ -1,7 +1,7 @@
 ---
 title: "Self-Hosted Research Tracker: SOTA Backlog on Redmine"
 date: 2024-01-01
-external_link: "http://thistleknot.sytes.net"
+external_link: ""
 summary: "Self-hosted Redmine instance used to systematically track SOTA research backlog: papers to implement, experiments to run, and open questions across ML, retrieval, and agentic systems. Research discipline as infrastructure."
 tags:
   - self-hosted
@@ -28,4 +28,4 @@ Most engineers consume research. This is the infrastructure for doing something 
 
 ### Infrastructure
 
-Self-hosted on homelab hardware. Accessible at [thistleknot.sytes.net](http://thistleknot.sytes.net). Demonstrates comfort with self-managed infrastructure beyond cloud-only environments.
+Self-hosted on homelab hardware. Previously exposed through a personal dynamic-DNS endpoint. Demonstrates comfort with self-managed infrastructure beyond cloud-only environments.

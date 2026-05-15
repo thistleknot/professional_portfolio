@@ -1,17 +1,18 @@
 ---
-title: "High-Impact Document Drafting Acceleration"
+title: "Full-Stack Safety Reporting Retrieval System"
 date: 2024-09-01
 image:
   filename: "work-project5.png"
   preview_only: false
-summary: "Developed a RAG-based system to reduce flow time for drafting high-impact critical documents, saving 400 engineering hours per quarter through structured JSON schema output and hallucination detection."
+summary: "Built an end-to-end semantic retrieval application for safety reporting, combining a React front end with a FastAPI backend to reduce reporting time from hours to minutes."
 tags:
   - rag-systems
-  - hallucination-detection
+  - react
+  - fastapi
   - aerospace
 ---
 
-## High-Impact Document Drafting Acceleration
+## Full-Stack Safety Reporting Retrieval System
 
 **Industry/Domain:** Aerospace & Defense
 
@@ -21,25 +22,25 @@ tags:
 
 ## Impact
 
-- **400 engineering hours saved per quarter** through automated drafting assistance
+- **Reporting time reduced from hours to minutes** through analyst-facing semantic retrieval
 
 ## Key Contributions
 
-**RAG Pipeline for Critical Documentation**
-- Built retrieval-augmented generation pipeline grounding drafts in authoritative source documentation
-- Reduced manual research and drafting flow time by surfacing relevant precedents and regulatory references
+**Full-Stack Retrieval Application**
+- Built React front end for analyst-facing safety reporting workflows
+- Developed FastAPI backend orchestrating semantic retrieval and evidence assembly
 
-**Structured Output & Validation**
-- Enforced JSON schema on LLM outputs to ensure consistent, parseable document structure
-- Schema validation catches malformed responses before they reach downstream consumers
+**Grounded Reporting Workflow**
+- Connected reporting flows to semantically relevant source documentation from unstructured corpora
+- Surfaced relevant evidence quickly enough to move reporting from hours to minutes
 
-**Hallucination Detection**
-- Implemented hallucination detection layer comparing generated claims against retrieved source passages
-- Flags low-confidence outputs for human review, preventing ungrounded content from entering drafts
+**Delivery & Operations**
+- Deployed application components through CloudFoundry with GitLab CI/CD support
+- Delivered a reproducible full-stack workflow suited to regulated engineering environments
 
 ## Technologies Used
 
+- **Application Layer:** React, FastAPI
 - **LLM & Retrieval:** RAG pipeline, vector search, LangChain
-- **Output Control:** JSON schema enforcement, structured generation
-- **Reliability:** Hallucination detection, grounding verification
-- **Infrastructure:** Python, GitLab CI/CD, CloudFoundry
+- **Data Infrastructure:** PostgreSQL, pgVector
+- **Infrastructure:** CloudFoundry, Docker, GitLab CI/CD

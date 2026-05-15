@@ -1,10 +1,10 @@
 ---
-title: Joshua C Laferriere
-role: Machine Learning Engineer
+title: Joshua C Laferriere, M.S.
+role: Full Stack AI/ML Engineer
 avatar:
   filename: avatar.jpg
 bio: |
-  ML Engineer specializing in production NLP, semantic systems (RAG, pgVector, knowledge graphs), and neurosymbolic AI. 12+ years across aerospace, government, media, and finance. Built SOTA transformer pipelines, domain-specific retrievers, and deployed resilient systems at scale.
+  Full Stack AI/ML Engineer with 12+ years building production ML and data systems across aerospace, media, and government infrastructure. Specializes in NLP, semantic retrieval, and recommendation systems. Ships production code and integrates current research into working systems.
 interests:
   - Semantic AI & Knowledge Graphs
   - RAG & Retrieval Systems
@@ -49,18 +49,23 @@ work:
     date_start: 2022-02-01
     date_end: ""
     summary: |
-      - Developed domain-specific RAG pipeline using hybrid retriever for semantic document retrieval
-      - Built component lifecycle semantic business layer to support maintenance operations
-      - Modernized NER pipeline from legacy architecture to SOTA transformer-based model, eliminating EOL dependency risk
-      - Deployed and maintained CloudFoundry-hosted applications with GitLab CI/CD pipelines
-      - Agile practitioner using Jira across data science and engineering teams
+      - Developed domain-specific RAG pipeline surfacing relevant documentation from unstructured corpus, reducing service cycle time for maintenance operations
+      - Built end-to-end semantic retrieval system with React front end and FastAPI back end for safety reporting, reducing reporting time from hours to minutes
+      - Mapped component lifecycle relationships into a queryable business layer, structuring operational support across maintenance workflows
+      - Replaced legacy entity recognition with current architecture, eliminating end-of-life dependency risk while maintaining domain accuracy
+      - Introduced Dask for scalable pipeline execution, extending data workflows beyond single-machine capacity
+      - Operationalized Docker and CloudFoundry for ML application hosting, delivering reproducible deployment under compliance requirements
+      - Authored unit and regression test suites as automated GitLab CI/CD pipeline blockers, keeping manual QA at release sign-off
+      - Deployed GlusterFS and VDO for shared compute storage with deduplication, improving storage utilization across simulation and processing environments
+      - Coordinated delivery across data science and engineering teams using Jira and Azure DevOps
   - position: AI Engineer Consultant
     company_name: Vennify.com
     location: Remote
     date_start: 2023-11-01
     date_end: 2024-02-01
     summary: |
-      - A/B testing for NLP model deployment: 15% latency reduction; dynamic programming batching solution: 30% training time reduction
+      - Validated model rollout through structured deployment testing, reducing inference latency by 15%
+      - Restructured batching strategy for the training pipeline, reducing end-to-end training time by 30%
   - position: Systems Engineer III
     company_name: Boeing (Contractor)
     company_url: "https://www.boeing.com"
@@ -68,9 +73,9 @@ work:
     date_start: 2021-08-01
     date_end: 2022-02-01
     summary: |
-      - Unified authentication across Windows and Linux using OpenLDAP and Samba V4, ensuring DFARS/NIST security compliance
-      - Deployed Nagios for infrastructure monitoring across distributed systems
-      - Developed Access Database to track and support EOL software lifecycle migration
+      - Unified authentication across heterogeneous Windows and Linux environments, ensuring DFARS/NIST compliance across distributed infrastructure
+      - Deployed infrastructure monitoring across distributed systems, improving operational visibility for engineering and support teams
+      - Built software end-of-life tracking database, structuring migration planning and execution support
   - position: System Administrator II
     company_name: NOAA (Contractor)
     company_url: "https://www.noaa.gov"
@@ -86,9 +91,8 @@ work:
     date_start: 2015-01-01
     date_end: 2019-03-01
     summary: |
-      - Developed Python-based automation for firmware deployment across 100+ set-top boxes
-      - Implemented Kanban workflow management using Jira for QA and delivery tracking
-      - Reduced deployment time through CI/CD pipeline optimization
+      - Scripted firmware rollout with embedded verification across network equipment, eliminating manual deployment bottlenecks while keeping quality checks in the release path
+      - Deployed resilient server systems interfacing with network devices, supporting stable physical infrastructure for QA and delivery operations
   - position: Linux Systems Engineer
     company_name: Quadranet
     company_url: "https://www.quadranet.com"
@@ -103,25 +107,31 @@ skills:
   - name: ML & AI
     items:
       - Transformers & Vision Transformers
-      - Deep Learning & Reinforcement Learning
-      - NLP & Named Entity Recognition
+      - Deep Learning & NLP
       - RAG & Semantic Retrieval
+      - Reinforcement Learning
       - Time Series Forecasting
-      - Multimodal Pipelines
+      - Bayesian Methods
   - name: Frameworks & Libraries
     items:
-      - PyTorch, TensorFlow, Keras
-      - LangChain, spaCy, Transformers
-      - Streamlit, Plotly, Grafana
+      - PyTorch, TensorFlow, LangGraph
+      - LangChain, spaCy, FastMCP
+      - FastAPI, React, Flask
+      - Streamlit, Plotly
   - name: Data & Infrastructure
     items:
       - PostgreSQL, pgVector, Neo4j
       - Dask, Airflow, SQL
-      - CloudFoundry, Docker, Kubernetes
+      - GlusterFS, LustreFS, VDO
+  - name: Cloud & DevOps
+    items:
+      - AWS, GCP, Azure
+      - Docker, Kubernetes, CloudFoundry
+      - GitLab CI/CD, NIST/DFARS Compliance
   - name: Languages & Tools
     items:
-      - Python, Bash
-      - Git, GitLab CI/CD
+      - Python, R, Bash, C++
+      - Git, Jira, Azure DevOps
 languages:
   - name: English
     percent: 100

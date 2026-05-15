@@ -4,7 +4,7 @@ date: 2024-06-01
 image:
   filename: "work-project1.png"
   preview_only: false
-summary: "Built a production-grade RAG pipeline for aerospace maintenance documentation, combining dense vector search with BM25 retrieval and a domain-specific semantic layer to support operations analysts."
+summary: "Built a production-grade RAG pipeline for aerospace maintenance documentation, combining hybrid retrieval and domain-specific semantic modeling to reduce service cycle time for operations analysts."
 tags:
   - rag-systems
   - nlp
@@ -23,25 +23,22 @@ tags:
 ## Key Contributions
 
 **RAG Pipeline Architecture**
-- Designed hybrid retriever combining dense vector search (pgVector) with BM25 lexical matching
-- Fine-tuned embedding models on aerospace maintenance documentation for domain alignment
-- Query expansion optimized for domain-specific terminology
-- Fallback chains ensuring graceful degradation under edge cases
+- Designed hybrid retrieval combining dense vector search with lexical matching for aerospace maintenance documentation
+- Fine-tuned embedding models and query expansion for domain-specific terminology
+- Built retrieval behavior around operational analyst workflows rather than generic document search
 
 **Semantic Business Layer**
-- Built component lifecycle management system tracking maintenance states and dependencies
-- Ontology-driven classification enabling compliance reporting and maintenance planning
-- Integration with existing maintenance tracking systems
+- Mapped component lifecycle relationships into a queryable business layer for maintenance operations
+- Structured maintenance states and dependencies so downstream workflows could reason over them consistently
 
-**Deployment & Infrastructure**
-- Deployed CloudFoundry-hosted applications with GitLab CI/CD pipelines
-- Monitoring dashboards tracking query performance and system health
-- Collaborated with Agile teams using Jira
+**Deployment & Scale**
+- Introduced Dask for scalable pipeline execution beyond single-machine capacity
+- Operationalized Docker and CloudFoundry with GitLab CI/CD for reproducible deployment
+- Coordinated delivery across data science and engineering through Jira and Azure DevOps
 
 ## Technologies Used
 
-- **NLP & ML:** PyTorch, Transformers (HuggingFace), LangChain, RAG frameworks
-- **Data Infrastructure:** PostgreSQL, pgVector
-- **Deployment:** CloudFoundry, Docker, GitLab CI/CD
-- **Monitoring:** Prometheus, Grafana
-
+- **NLP & ML:** PyTorch, Transformers, LangChain
+- **Data Infrastructure:** PostgreSQL, pgVector, Dask
+- **Deployment:** Docker, CloudFoundry, GitLab CI/CD
+- **Collaboration:** Jira, Azure DevOps
